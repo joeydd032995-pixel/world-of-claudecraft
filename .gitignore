@@ -46,11 +46,13 @@ scripts/generate_treasure_chest.mjs
 Thumbs.db
 *.log
 .idea/
-# .claude/: keep personal/local config out of git, but track the shared skills, agents & hooks
+# .claude/: keep personal/local config out of git, but track the shared skills, agents,
+# hooks & project settings (settings.local.json stays personal/ignored)
 .claude/*
 !.claude/skills/
 !.claude/agents/
 !.claude/hooks/
+!.claude/settings.json
 .cursor/
 
 # ClaudeCraft Vanilla Studio: never track client-extracted data or emulator dumps

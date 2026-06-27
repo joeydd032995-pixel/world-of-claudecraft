@@ -24,12 +24,12 @@ structure. They never import, commit, or redistribute copyrighted content (item/
 zone names, flavor text, map geometry, art, audio), client-extracted data (DBC/WDB/MPQ/
 cache), or client-mod/cheat tooling. Everything authored is original. See `PROVENANCE.md`.
 
-## Arming the provenance guard (opt-in)
+## The provenance guard (armed)
 
-The studio ships a pre-commit guard (`.claude/hooks/provenance-guard.sh`) and an example
-config (`docs/studio/settings.example.json`), but does not auto-install startup hooks. To arm
-it, merge the example into `.claude/settings.json` yourself. The scanner also runs on demand
-via `npm run studio:provenance` regardless.
+`.claude/settings.json` arms the pre-commit guard (`.claude/hooks/provenance-guard.sh`), which
+scans staged files on `git commit`/`git add` and blocks copyrighted names, emulator DB
+identifiers, and client-extracted artifacts. `docs/studio/settings.example.json` documents the
+config. The scanner also runs on demand via `npm run studio:provenance`.
 
 ## Where to start
 

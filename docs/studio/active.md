@@ -8,7 +8,7 @@ gates across sessions so work survives compaction and container restarts.
 - Feature: (none yet)
 - Phase: 0 (Setup)
 - Review mode: lean (see `review-mode.txt`)
-- Provenance guard: available, opt-in (merge `settings.example.json` into `.claude/settings.json` to arm `.claude/hooks/provenance-guard.sh`)
+- Provenance guard: armed (`.claude/settings.json` runs `.claude/hooks/provenance-guard.sh` on git commit/add; `settings.example.json` documents the config)
 
 ## Next action
 

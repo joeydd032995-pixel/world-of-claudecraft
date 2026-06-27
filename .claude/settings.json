@@ -1,0 +1,26 @@
+{
+  "$comment": "ClaudeCraft Vanilla Studio project settings. Arms the provenance guard and keeps client-extracted data and emulator dumps out of the tree. See docs/studio/PROVENANCE.md and docs/studio/settings.example.json.",
+  "permissions": {
+    "deny": [
+      "Read(./cache/**)",
+      "Read(./reference-private/**)",
+      "Write(**/*.dbc)",
+      "Write(**/*.wdb)",
+      "Write(**/*.mpq)",
+      "Write(**/*.adt)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/provenance-guard.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
