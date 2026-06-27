@@ -22,12 +22,12 @@ describe('/talents readout', () => {
 
   it('shows spec, spent/total and the per-tree split', () => {
     const sim = new Sim({ seed: 7, playerClass: 'warrior' });
-    sim.setPlayerLevel(MAX_LEVEL); // 11 points available at level 20
+    sim.setPlayerLevel(MAX_LEVEL); // 17 points available at level 26
     expect(sim.applyTalents({ spec: 'arms', ranks: { war_toughness: 3 }, choices: {} })).toBe(true);
 
     const armsName = talentsFor('warrior')!.specs.find((s) => s.id === 'arms')!.name;
     const text = readout(sim, '/talents');
-    expect(text).toBe(`Talents: ${armsName} — 3/11 points spent (Class 3, ${armsName} 0). 8 unspent.`);
+    expect(text).toBe(`Talents: ${armsName} — 3/17 points spent (Class 3, ${armsName} 0). 14 unspent.`);
   });
 
   it('reports no specialization when none is chosen', () => {
@@ -36,21 +36,26 @@ describe('/talents readout', () => {
     expect(sim.applyTalents({ spec: null, ranks: { war_toughness: 2 }, choices: {} })).toBe(true);
 
     const text = readout(sim, '/talents');
-    expect(text).toBe('Talents: no specialization — 2/11 points spent (Class 2). 9 unspent.');
+    expect(text).toBe('Talents: no specialization — 2/17 points spent (Class 2). 15 unspent.');
   });
 
   it('omits the unspent suffix when all points are spent and aliases resolve', () => {
     const sim = new Sim({ seed: 7, playerClass: 'warrior' });
-    sim.setPlayerLevel(MAX_LEVEL);
-    // 11 points, all in the class tree (Toughness/Cruelty cap at 3 each here).
+    // Level 22 grants exactly 13 points, which is the warrior class tree's full
+    // passive capacity (no choice/active nodes), so they can all be spent to hit the
+    // all-points-spent branch without depending on choice-node allocation.
+    sim.setPlayerLevel(22);
     expect(sim.applyTalents({
       spec: null,
-      ranks: { war_toughness: 3, war_cruelty: 3, war_deflection: 3, war_imp_thunder_clap: 2 },
+      ranks: {
+        war_toughness: 3, war_cruelty: 3, war_imp_heroic_strike: 2, war_imp_thunder_clap: 2,
+        war_deflection: 3,
+      },
       choices: {},
     })).toBe(true);
 
     const text = readout(sim, '/talent'); // alias
-    expect(text).toBe('Talents: no specialization — 11/11 points spent (Class 11).');
+    expect(text).toBe('Talents: no specialization — 13/13 points spent (Class 13).');
     expect(readout(sim, '/spec')).toBe(text); // alias parity
   });
 });

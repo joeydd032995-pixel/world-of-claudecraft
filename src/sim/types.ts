@@ -1623,12 +1623,17 @@ export function normAngle(a: number): number {
 // Classic progression formulas
 // ---------------------------------------------------------------------------
 
-// XP required to go from level L to L+1 (real vanilla values, levels 1..20)
+// XP required to go from level L to L+1 (real vanilla values, levels 1..26).
+// Levels 21..26 (the cap extension) are derived from the classic per-level XP formula
+// round100(8*L*(45+5L)), which reproduces all of levels 1..20 exactly; see
+// docs/studio/mechanics/level-curve-21-26.md. The level-26 entry (36400) is required even
+// though there is no real level 27: the post-cap virtual-level machinery below reads
+// XP_TABLE[MAX_LEVEL-1] directly as its first geometric step.
 export const XP_TABLE = [
   400, 900, 1400, 2100, 2800, 3600, 4500, 5400, 6500, 7600, 8800, 10100, 11400, 12900, 14400, 16000,
-  17700, 19400, 21300, 23200,
+  17700, 19400, 21300, 23200, 25200, 27300, 29400, 31700, 34000, 36400,
 ];
-export const MAX_LEVEL = 20;
+export const MAX_LEVEL = 26;
 
 // Shared sim constants relocated here (C1) so both sim.ts and the extracted damage
 // core (src/sim/combat/damage.ts) can import them without a sim.ts cycle.
@@ -1733,8 +1738,17 @@ export const MILESTONES: MilestoneDef[] = [
 // be spammed from a hacked client to inflate the (leaderboard-visible) rank —
 // the server caps rank at maxPrestigeRank(lifetimeXp) regardless of how many
 // prestige commands arrive.
-export const PRESTIGE_XP_PER_RANK = xpForLevel(MAX_LEVEL); // = 23,200
+export const PRESTIGE_XP_PER_RANK = xpForLevel(MAX_LEVEL); // = 36,400 (the level-26 step)
 
+// Level-cap-raise back-compat (cap 20 -> 26): raising MAX_LEVEL enlarges both
+// xpToReachLevel(MAX_LEVEL) and PRESTIGE_XP_PER_RANK, so an already-prestiged character's
+// banked post-cap XP partly converts into the new real levels 21-26 and the next rank costs
+// more. This is intentional and safe: prestigeRank is only ever incremented by prestige()
+// and is never recomputed/clamped from maxPrestigeRank on load, so existing ranks are
+// preserved (never downgraded). Such characters load at level 20 (below the new cap), level
+// 20 -> 26 first, and re-qualify for the next prestige once they out-earn it under the new
+// curve. canPrestige and xpUntilNextPrestige stay mutually consistent (no "ready but rejected"
+// state). See docs/studio/gdd/zone4-emberfall-reach.md (cap-raise GDD).
 // Highest prestige rank the given lifetime XP can support (post-cap XP / cost).
 export function maxPrestigeRank(lifetimeXp: number): number {
   const earned = lifetimeXp - xpToReachLevel(MAX_LEVEL);

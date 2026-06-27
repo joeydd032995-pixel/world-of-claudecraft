@@ -99,7 +99,7 @@
       "tick": 0,
       "time": 0,
       "nextId": 389,
-      "state": "f9d0d8ab",
+      "state": "fe11ff44",
       "events": "8f2c18b3",
       "rng": {
         "draws": 0,
@@ -122,7 +122,7 @@
             "chest": "recruit_tunic",
             "mainhand": "worn_sword"
           },
-          "lifetimeXp": 167200,
+          "lifetimeXp": 338000,
           "talents": {
             "choices": {},
             "ranks": {
@@ -136,18 +136,18 @@
       "entities": [
         {
           "aiState": "idle",
-          "attackPower": 122,
+          "attackPower": 146,
           "combatTimer": 99,
-          "critChance": 0.0895,
+          "critChance": 0.0925,
           "detonateTimer": "Infinity",
-          "dodgeChance": 0.0695,
+          "dodgeChance": 0.0725,
           "fallStartY": 1.5,
           "fiveSecondRule": 99,
-          "hp": 812,
+          "hp": 1040,
           "id": 388,
           "kind": "player",
-          "level": 20,
-          "maxHp": 812,
+          "level": 26,
+          "maxHp": 1040,
           "maxResource": 100,
           "moveSpeed": 7,
           "onGround": true,
@@ -166,12 +166,12 @@
             "z": -2
           },
           "stats": {
-            "agi": 39,
-            "armor": 376,
+            "agi": 45,
+            "armor": 460,
             "int": 10,
             "spi": 11,
-            "sta": 60,
-            "str": 61
+            "sta": 72,
+            "str": 73
           },
           "templateId": "warrior",
           "weapon": {
@@ -186,7 +186,7 @@
       "tick": 0,
       "time": 0,
       "nextId": 389,
-      "state": "6ca21f2c",
+      "state": "185f5ab3",
       "events": "c43b7693",
       "rng": {
         "draws": 0,
@@ -209,7 +209,7 @@
             "chest": "recruit_tunic",
             "mainhand": "worn_sword"
           },
-          "lifetimeXp": 167200,
+          "lifetimeXp": 338000,
           "talents": {
             "choices": {},
             "ranks": {},
@@ -220,18 +220,18 @@
       "entities": [
         {
           "aiState": "idle",
-          "attackPower": 122,
+          "attackPower": 146,
           "combatTimer": 99,
-          "critChance": 0.0695,
+          "critChance": 0.0725,
           "detonateTimer": "Infinity",
-          "dodgeChance": 0.0695,
+          "dodgeChance": 0.0725,
           "fallStartY": 1.5,
           "fiveSecondRule": 99,
-          "hp": 812,
+          "hp": 1040,
           "id": 388,
           "kind": "player",
-          "level": 20,
-          "maxHp": 812,
+          "level": 26,
+          "maxHp": 1040,
           "maxResource": 100,
           "moveSpeed": 7,
           "onGround": true,
@@ -250,12 +250,12 @@
             "z": -2
           },
           "stats": {
-            "agi": 39,
-            "armor": 376,
+            "agi": 45,
+            "armor": 460,
             "int": 10,
             "spi": 11,
-            "sta": 60,
-            "str": 61
+            "sta": 72,
+            "str": 73
           },
           "templateId": "warrior",
           "weapon": {
@@ -270,7 +270,7 @@
       "tick": 0,
       "time": 0,
       "nextId": 389,
-      "state": "807dad87",
+      "state": "56cd9cdd",
       "events": "0ebb4ffd",
       "rng": {
         "draws": 0,
@@ -292,7 +292,7 @@
             "chest": "recruit_tunic",
             "mainhand": "worn_sword"
           },
-          "lifetimeXp": 167200,
+          "lifetimeXp": 338000,
           "loadouts": [
             {
               "alloc": {
@@ -322,18 +322,18 @@
       "entities": [
         {
           "aiState": "idle",
-          "attackPower": 122,
+          "attackPower": 146,
           "combatTimer": 99,
-          "critChance": 0.0995,
+          "critChance": 0.1025,
           "detonateTimer": "Infinity",
-          "dodgeChance": 0.0695,
+          "dodgeChance": 0.0725,
           "fallStartY": 1.5,
           "fiveSecondRule": 99,
-          "hp": 812,
+          "hp": 1040,
           "id": 388,
           "kind": "player",
-          "level": 20,
-          "maxHp": 812,
+          "level": 26,
+          "maxHp": 1040,
           "maxResource": 100,
           "moveSpeed": 7,
           "onGround": true,
@@ -352,12 +352,12 @@
             "z": -2
           },
           "stats": {
-            "agi": 39,
-            "armor": 376,
+            "agi": 45,
+            "armor": 460,
             "int": 10,
             "spi": 11,
-            "sta": 60,
-            "str": 61
+            "sta": 72,
+            "str": 73
           },
           "templateId": "warrior",
           "weapon": {
@@ -372,7 +372,7 @@
       "tick": 0,
       "time": 0,
       "nextId": 389,
-      "state": "3543d768",
+      "state": "3b1a2085",
       "events": "345e01d7",
       "rng": {
         "draws": 0,
@@ -394,7 +394,7 @@
             "chest": "recruit_tunic",
             "mainhand": "worn_sword"
           },
-          "lifetimeXp": 167200,
+          "lifetimeXp": 338000,
           "loadouts": [
             {
               "alloc": {
@@ -424,18 +424,18 @@
       "entities": [
         {
           "aiState": "idle",
-          "attackPower": 122,
+          "attackPower": 146,
           "combatTimer": 99,
-          "critChance": 0.0695,
+          "critChance": 0.0725,
           "detonateTimer": "Infinity",
-          "dodgeChance": 0.0695,
+          "dodgeChance": 0.0725,
           "fallStartY": 1.5,
           "fiveSecondRule": 99,
-          "hp": 812,
+          "hp": 1040,
           "id": 388,
           "kind": "player",
-          "level": 20,
-          "maxHp": 812,
+          "level": 26,
+          "maxHp": 1040,
           "maxResource": 100,
           "moveSpeed": 7,
           "onGround": true,
@@ -454,12 +454,12 @@
             "z": -2
           },
           "stats": {
-            "agi": 39,
-            "armor": 376,
+            "agi": 45,
+            "armor": 460,
             "int": 10,
             "spi": 11,
-            "sta": 60,
-            "str": 61
+            "sta": 72,
+            "str": 73
           },
           "templateId": "warrior",
           "weapon": {
@@ -474,7 +474,7 @@
       "tick": 0,
       "time": 0,
       "nextId": 389,
-      "state": "13696236",
+      "state": "72d43e11",
       "events": "8f2c18b3",
       "rng": {
         "draws": 0,
@@ -496,7 +496,7 @@
             "chest": "recruit_tunic",
             "mainhand": "worn_sword"
           },
-          "lifetimeXp": 167200,
+          "lifetimeXp": 338000,
           "loadouts": [
             {
               "alloc": {
@@ -524,18 +524,18 @@
       "entities": [
         {
           "aiState": "idle",
-          "attackPower": 132,
+          "attackPower": 156,
           "combatTimer": 99,
-          "critChance": 0.1195,
+          "critChance": 0.1225,
           "detonateTimer": "Infinity",
-          "dodgeChance": 0.0695,
+          "dodgeChance": 0.0725,
           "fallStartY": 1.5,
           "fiveSecondRule": 99,
-          "hp": 812,
+          "hp": 1040,
           "id": 388,
           "kind": "player",
-          "level": 20,
-          "maxHp": 812,
+          "level": 26,
+          "maxHp": 1040,
           "maxResource": 100,
           "moveSpeed": 7,
           "onGround": true,
@@ -554,12 +554,12 @@
             "z": -2
           },
           "stats": {
-            "agi": 39,
-            "armor": 376,
+            "agi": 45,
+            "armor": 460,
             "int": 10,
             "spi": 11,
-            "sta": 60,
-            "str": 61
+            "sta": 72,
+            "str": 73
           },
           "templateId": "warrior",
           "weapon": {
@@ -574,7 +574,7 @@
       "tick": 0,
       "time": 0,
       "nextId": 389,
-      "state": "13696236",
+      "state": "72d43e11",
       "events": "741638a5",
       "rng": {
         "draws": 0,
@@ -596,7 +596,7 @@
             "chest": "recruit_tunic",
             "mainhand": "worn_sword"
           },
-          "lifetimeXp": 167200,
+          "lifetimeXp": 338000,
           "loadouts": [
             {
               "alloc": {
@@ -624,18 +624,18 @@
       "entities": [
         {
           "aiState": "idle",
-          "attackPower": 132,
+          "attackPower": 156,
           "combatTimer": 99,
-          "critChance": 0.1195,
+          "critChance": 0.1225,
           "detonateTimer": "Infinity",
-          "dodgeChance": 0.0695,
+          "dodgeChance": 0.0725,
           "fallStartY": 1.5,
           "fiveSecondRule": 99,
-          "hp": 812,
+          "hp": 1040,
           "id": 388,
           "kind": "player",
-          "level": 20,
-          "maxHp": 812,
+          "level": 26,
+          "maxHp": 1040,
           "maxResource": 100,
           "moveSpeed": 7,
           "onGround": true,
@@ -654,12 +654,12 @@
             "z": -2
           },
           "stats": {
-            "agi": 39,
-            "armor": 376,
+            "agi": 45,
+            "armor": 460,
             "int": 10,
             "spi": 11,
-            "sta": 60,
-            "str": 61
+            "sta": 72,
+            "str": 73
           },
           "templateId": "warrior",
           "weapon": {

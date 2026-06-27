@@ -114,10 +114,10 @@ describe('point economy', () => {
     expect(talentPointsAtLevel(FIRST_TALENT_LEVEL - 1)).toBe(0);
     expect(talentPointsAtLevel(1)).toBe(0);
   });
-  it('grants one point per level from the first talent level, 11 at cap', () => {
+  it('grants one point per level from the first talent level, 17 at cap', () => {
     expect(talentPointsAtLevel(FIRST_TALENT_LEVEL)).toBe(1);
     expect(talentPointsAtLevel(MAX_LEVEL)).toBe(MAX_LEVEL - FIRST_TALENT_LEVEL + 1);
-    expect(talentPointsAtLevel(MAX_LEVEL)).toBe(11);
+    expect(talentPointsAtLevel(MAX_LEVEL)).toBe(17);
   });
 });
 
