@@ -1,0 +1,26 @@
+{
+  "$comment": "ClaudeCraft Vanilla Studio settings, OPT-IN. To arm the provenance guard, merge these entries into .claude/settings.json yourself (the studio does not auto-install startup hooks). Minimal by design: one provenance guard hook plus deny rules that keep client-extracted data and emulator dumps out of the tree. See docs/studio/PROVENANCE.md.",
+  "permissions": {
+    "deny": [
+      "Read(./cache/**)",
+      "Read(./reference-private/**)",
+      "Write(**/*.dbc)",
+      "Write(**/*.wdb)",
+      "Write(**/*.mpq)",
+      "Write(**/*.adt)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/provenance-guard.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
