@@ -187,8 +187,8 @@ function nodeIndex(ct: ClassTalents): Map<string, TalentNode> {
 }
 
 // ---------------------------------------------------------------------------
-// Point economy — 1 point per level from FIRST_TALENT_LEVEL (11 points at the
-// level-20 cap). Recomputed from level so a tuning change is migration-safe.
+// Point economy — 1 point per level from FIRST_TALENT_LEVEL (17 points at the
+// level-26 cap). Recomputed from level so a tuning change is migration-safe.
 // ---------------------------------------------------------------------------
 
 export const FIRST_TALENT_LEVEL = 10;

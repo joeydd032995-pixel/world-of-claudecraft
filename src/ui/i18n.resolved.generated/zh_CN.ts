@@ -5069,6 +5069,57 @@ export const zh_CN: EnTranslations = {
       "acolyte_tessa": {
         "name": "侍僧泰莎"
       },
+      "ashclaw_warg": {
+        "name": "Ashclaw Warg"
+      },
+      "ashclaw_alpha": {
+        "name": "Ashclaw Alpha"
+      },
+      "cindermarch_kobold": {
+        "name": "Cindermarch Stoker"
+      },
+      "cindermarch_blaster": {
+        "name": "Cindermarch Blaster"
+      },
+      "emberbound_initiate": {
+        "name": "Emberbound Initiate"
+      },
+      "emberbound_pyromancer": {
+        "name": "Emberbound Pyromancer"
+      },
+      "blightash_revenant": {
+        "name": "Blightash Revenant"
+      },
+      "blightash_wight": {
+        "name": "Blightash Wight"
+      },
+      "charwing_roc": {
+        "name": "Charwing Roc"
+      },
+      "charwing_matriarch": {
+        "name": "Charwing Matriarch"
+      },
+      "slagjaw_marauder": {
+        "name": "Slagjaw Marauder"
+      },
+      "slagjaw_chieftain": {
+        "name": "Slagjaw Chieftain"
+      },
+      "magma_husk": {
+        "name": "Magma Husk"
+      },
+      "ember_wisp": {
+        "name": "Ember Wisp"
+      },
+      "vrask_the_emberseer": {
+        "name": "Vrask the Emberseer"
+      },
+      "grand_pyrist_thessian": {
+        "name": "Grand Pyrist Thessian"
+      },
+      "vrothaxis_the_ember_heart": {
+        "name": "Vrothaxis, the Ember Heart"
+      },
       "ironvein_foreman": {
         "name": "铁脉工头"
       },
@@ -5283,6 +5334,36 @@ export const zh_CN: EnTranslations = {
         "name": "哈尔文修士",
         "title": "圣物库守护人",
         "greeting": "下方的圣物库又移位了。"
+      },
+      "warden_ulra": {
+        "name": "Warden Ulra",
+        "title": "Cinderhold Warden",
+        "greeting": "The Wyrm is dead, {className}, and still this fire will not die with it. Hold the line at Cinderhold, and we may yet smother it."
+      },
+      "brother_aldric_cinderhold": {
+        "name": "Brother Aldric",
+        "title": "Priest of the Vale",
+        "greeting": "I stood over Korzul as it died, {playerName}. I thought that the end. But the fire it bled into the rock still creeps - and now there are those who would feed it."
+      },
+      "scout_brannis": {
+        "name": "Scout Brannis",
+        "title": "Frontier Tracker",
+        "greeting": "Every track on this frontier ends at the same place, {playerName}: the fire. Mind your step."
+      },
+      "quartermaster_dessa": {
+        "name": "Quartermaster Dessa",
+        "title": "Cinderhold Quartermaster",
+        "greeting": "Mountain stores for a mountain that is on fire, {playerName}. Take what you need."
+      },
+      "armorer_kovan": {
+        "name": "Armorer Kovan",
+        "title": "Cinderhold Armorer",
+        "greeting": "Slag-forged steel, {playerName}. It has already been through worse fire than you will face."
+      },
+      "loremaster_sela": {
+        "name": "Loremaster Sela",
+        "title": "Cinderhold Loremaster",
+        "greeting": "The fire is not natural, {playerName}. It remembers. Help me learn what it remembers, and we may learn how to make it forget."
       },
       "tidewatcher_ondrel": {
         "name": "翁德雷尔·凡恩",
@@ -6043,6 +6124,242 @@ export const zh_CN: EnTranslations = {
           }
         }
       },
+      "q_cinderhold_signal": {
+        "title": "The Line at Cinderhold",
+        "text": "Korzul is dead, {playerName}, but its death-fire crept past Thornpeak and surfaced here. Warden Ulra holds a half-built waystation against it. A signal flare stands at the Cinderhold gate - take it up, and tell her the priest of the Vale stands with her.",
+        "completion": "If Aldric vouches for you, that is enough for me. Welcome to the Reach, {playerName}. It is not much, but it is the line.",
+        "objectives": {
+          "0": {
+            "label": "Cinderhold Signal Flare"
+          }
+        }
+      },
+      "q_ashclaw_culling": {
+        "title": "Wargs on the Ash",
+        "text": "The wargs of the Ashclaw Scrub have grown bold and many, driven down from the burning slopes. Thin them, {playerName} - twelve, to keep the road south of the hold open.",
+        "completion": "Twelve fewer shadows on the ash. The supply road breathes easier.",
+        "objectives": {
+          "0": {
+            "label": "Ashclaw Warg slain"
+          }
+        }
+      },
+      "q_ashclaw_pelts": {
+        "title": "Ash-Cured Leather",
+        "text": "Warg hide cured in ash takes a heat-ward no tannery can match, {playerName}. Bring me eight Ashclaw pelts and I will line the watch with something that does not catch fire.",
+        "completion": "Eight good hides. The watch will not burn this season - take these treads for your trouble.",
+        "objectives": {
+          "0": {
+            "label": "Ashclaw Pelt"
+          }
+        }
+      },
+      "q_ashclaw_alpha": {
+        "title": "The Pack Father",
+        "text": "One old warg leads them all - a scarred grey brute the trackers call the Alpha. Kill the pack father and the rest will scatter. It prowls the western edge of the Scrub. Bring me its fang.",
+        "completion": "The pack father's fang. The Scrub will be quiet for a while now. This mantle is yours, {playerName} - warg-leather, ash-cured.",
+        "objectives": {
+          "0": {
+            "label": "Alpha's Fang"
+          }
+        }
+      },
+      "q_cindermarch_tunnels": {
+        "title": "Trouble in the Cindermarch",
+        "text": "The kobolds of the Cindermarch Tunnels mine the seep itself, hauling out coals that should never have been lit. Kill twelve Cindermarch Stokers before they dig something loose.",
+        "completion": "Stoking the fire is exactly what we do not need. Well done thinning them, {playerName}.",
+        "objectives": {
+          "0": {
+            "label": "Cindermarch Stoker slain"
+          }
+        }
+      },
+      "q_cinder_resin": {
+        "title": "Sticky Business",
+        "text": "The Stokers pack their casks with cinder resin - a tar that smothers flame as well as it feeds it. Bring me six wads of it from the tunnels and I will ward the hold gates.",
+        "completion": "Six wads of resin. The gates will hold against an ember storm now.",
+        "objectives": {
+          "0": {
+            "label": "Cinder Resin"
+          }
+        }
+      },
+      "q_cindermarch_blasters": {
+        "title": "Powder Casks",
+        "text": "The deepest Cindermarch kobolds carry powder casks - Blasters, the trackers call them, and they go up like the mountain itself. Ten of them, {playerName}, before they bring a tunnel down on the road. Take a partner.",
+        "completion": "Ten casks defused the hard way. The tunnels will not collapse the road this week.",
+        "objectives": {
+          "0": {
+            "label": "Cindermarch Blaster slain"
+          }
+        }
+      },
+      "q_emberbound_scouts": {
+        "title": "Chants in the Ash",
+        "text": "I know those chants, {playerName}. The Emberbound are Wyrmcult, the same sect we broke at the Sanctum - only now they worship the fire itself. Their initiates muster at the Emberbound Camp to the south. Cut down twelve before they become something worse.",
+        "completion": "The same prayers, twisted toward the flame. They did not die with their god, {playerName}. They merely chose a new one.",
+        "objectives": {
+          "0": {
+            "label": "Emberbound Initiate slain"
+          }
+        }
+      },
+      "q_emberbound_orders": {
+        "title": "Orders from the Embers",
+        "text": "The initiates carry written orders, {playerName}. Kill eight more and bring me four sets - I would know what the Emberbound are building before they finish building it.",
+        "completion": "An \"ember heart,\" the orders call it - something to make the blight permanent. We must reach their vault before the rite is done.",
+        "objectives": {
+          "0": {
+            "label": "Emberbound Initiate slain"
+          },
+          "1": {
+            "label": "Emberbound Orders"
+          }
+        }
+      },
+      "q_emberash_study": {
+        "title": "Cores of the Frontier",
+        "text": "The fire has bred creatures of living slag - Magma Husks, lurching out of the Cinderpit. Put down twelve, {playerName}. I would study what the blight makes of stone and flame.",
+        "completion": "Slag that walks. The fire is not merely spreading, {playerName} - it is shaping. I must learn how.",
+        "objectives": {
+          "0": {
+            "label": "Magma Husk slain"
+          }
+        }
+      },
+      "q_emberash_cores": {
+        "title": "What the Slag Remembers",
+        "text": "At their heart the Husks carry a cooling slag core - the fire half-remembered in stone. Bring me six. If I can read them, I may learn how to make the whole frontier forget.",
+        "completion": "Six cores, each one a memory of the burning. There is a pattern here, {playerName}. The fire answers to something - or someone.",
+        "objectives": {
+          "0": {
+            "label": "Cooling Slag Core"
+          }
+        }
+      },
+      "q_blightash_unrest": {
+        "title": "The Blightash Flats",
+        "text": "The ash-buried dead of the Flats will not rest, {playerName} - the Emberbound raise them as Blightash Revenants to swell their numbers. Lay twelve back down. The dead of this frontier have suffered enough.",
+        "completion": "Twelve souls returned to the ash. The Emberbound will raise more, but tonight the Flats are quiet.",
+        "objectives": {
+          "0": {
+            "label": "Blightash Revenant slain"
+          }
+        }
+      },
+      "q_blightash_wights": {
+        "title": "Ash That Remembers",
+        "text": "The strongest of the risen dead are Wights - withered things that drain the life from any who near them. Kill six, {playerName}, and bring me the ash-lockets they wear. I would lay the names within to rest.",
+        "completion": "Six names, read and released. Take this - ash-woven, ward-blessed. You have earned a warmer thing than the Flats can give.",
+        "objectives": {
+          "0": {
+            "label": "Blightash Wight slain"
+          },
+          "1": {
+            "label": "Wight Ash Locket"
+          }
+        }
+      },
+      "q_charwing_eggs": {
+        "title": "Roost Above the Ash",
+        "text": "The Charwing rocs nest on the crags above the Roost, and their brood grows with the fire. Take six eggs from the roost before the flock doubles again, {playerName}.",
+        "completion": "Six eggs cold and unhatched. The flock will not grow this season. Brave work, climbing that roost.",
+        "objectives": {
+          "0": {
+            "label": "Charwing Egg"
+          }
+        }
+      },
+      "q_charwing_matriarch": {
+        "title": "The Matriarch",
+        "text": "The flock answers to one great old roc - the Matriarch, wings trailing cinder. While she lives the roost will always refill. End her, {playerName}, and bring me a talon. She circles the high Roost.",
+        "completion": "The Matriarch's talon, still warm. The roost is broken. Wear this crest - you climbed higher than any of my trackers dared.",
+        "objectives": {
+          "0": {
+            "label": "Matriarch's Talon"
+          }
+        }
+      },
+      "q_slagjaw_raiders": {
+        "title": "Raiders of the Hold",
+        "text": "The Slagjaw ogres have made a hold of the eastern crags and raid my supply lines for the iron they cannot forge. Break twelve Marauders, {playerName}, and they will think twice before the next raid.",
+        "completion": "Twelve marauders broken. The Slagjaw will lick their wounds - but their chieftain still holds the crag.",
+        "objectives": {
+          "0": {
+            "label": "Slagjaw Marauder slain"
+          }
+        }
+      },
+      "q_slagjaw_chieftain": {
+        "title": "The Chieftain's Hold",
+        "text": "Their chieftain wears a warhelm of slag-iron and works himself into a molten fury when cornered. Take him in his hold at the crag, {playerName} - take a few strong backs with you. With him gone the Slagjaw will scatter for good.",
+        "completion": "The Slagjaw warhelm, still hot from his fury. They are scattering already. The east is ours, {playerName}.",
+        "objectives": {
+          "0": {
+            "label": "Slagjaw Chieftain slain"
+          }
+        }
+      },
+      "q_emberward_signal": {
+        "title": "Wisps of the Cinderpit",
+        "text": "The Cinderpit churns with Ember Wisps now, {playerName} - motes of the living fire, drawn to the rite the Emberbound work below. Snuff ten. Each one we take is a fraction of fuel the cult cannot feed their heart.",
+        "completion": "Ten wisps snuffed. The pit dims, just a little. We are close to their vault now - I can feel the heat of it.",
+        "objectives": {
+          "0": {
+            "label": "Ember Wisp slain"
+          }
+        }
+      },
+      "q_emberward_wisps": {
+        "title": "What the Wisps Carry",
+        "text": "At a wisp’s heart is a core of pure ember-fire. Bring me five, {playerName}. Sela believes that if we understand what feeds the heart, we can starve it.",
+        "completion": "Five cores of living fire. Sela has what she needs. The vault door is just beyond the pit now.",
+        "objectives": {
+          "0": {
+            "label": "Ember Wisp Core"
+          }
+        }
+      },
+      "q_vrask": {
+        "title": "The Emberseer",
+        "text": "One of the Emberbound has seen too deep into the fire and become its prophet - Vrask the Emberseer, who walks the Cinderpit unburned and mends the cultists with flame. Kill the Emberseer, {playerName}. His staff will tell me how the rite is bound.",
+        "completion": "The Emberseer's staff. Now I see how the heart is anchored, {playerName}. We can break it - but only at its source, inside the vault.",
+        "objectives": {
+          "0": {
+            "label": "Vrask the Emberseer slain"
+          }
+        }
+      },
+      "q_grand_pyrist": {
+        "title": "The Vault Beneath the Ash",
+        "text": "The Emberbound forge their heart in an old vault, sealed with embers torn from the pit. Gather four vault seal embers from the Cinderpit approach, {playerName}, and we will open the way down into the Emberward Vault.",
+        "completion": "Four seals, and the vault door yields. Beyond it the rite is nearly done. We go down together, {playerName} - and we end this.",
+        "objectives": {
+          "0": {
+            "label": "Vault Seal Ember"
+          }
+        }
+      },
+      "q_korzuls_ember": {
+        "title": "The Ember Heart",
+        "text": "Within the vault the rite is led by Grand Pyrist Thessian, who would forge the ember heart and make the blight eternal. Cut him down before the heart is lit, {playerName}. Bring a full band - he does not work the rite alone.",
+        "completion": "Thessian falls, but his rite did not fail cleanly - it called something into being below. Steel yourself, {playerName}. The heart has a keeper now.",
+        "objectives": {
+          "0": {
+            "label": "Grand Pyrist Thessian slain"
+          }
+        }
+      },
+      "q_the_emberward_vault": {
+        "title": "The Emberward Vault",
+        "text": "Thessian's rite called a horror of living fire into the vault's heart - Vrothaxis, the Ember Heart made flesh. While it burns the blight will never cool. End it, {playerName}, and seal the vault behind you. This is where the Wyrm's fire dies at last.",
+        "completion": "It is done. The vault is sealed, the heart is cold, and beyond the door the frontier is already cooling. The Wyrm’s fire is out, {playerName}. You carried the Vale’s long road all the way to its end.",
+        "objectives": {
+          "0": {
+            "label": "Vrothaxis the Ember Heart slain"
+          }
+        }
+      },
       "q_drowned_choir": {
         "title": "溺亡唱诗班",
         "text": "那些涉行者并非孤身行动。它们之中游走着溺亡信徒——随神殿一同沉没的邪教徒，至今仍披着腐烂的法衣，仍在岸边礁石上吟唱祷词。让其中八名永远噤声，再为我带回它们随身携带的六件祭品。我想知道它们打算献给女神什么。",
@@ -6209,6 +6526,42 @@ export const zh_CN: EnTranslations = {
             "label": "墓龙圣所"
           }
         }
+      },
+      "emberfall_reach": {
+        "name": "Emberfall Reach",
+        "welcome": "Warden Ulra holds the line at Cinderhold, against fire that should have died with the Wyrm.",
+        "pois": {
+          "0": {
+            "label": "Cinderhold"
+          },
+          "1": {
+            "label": "Ashclaw Scrub"
+          },
+          "2": {
+            "label": "Cindermarch Tunnels"
+          },
+          "3": {
+            "label": "The Slagmere"
+          },
+          "4": {
+            "label": "Charwing Roost"
+          },
+          "5": {
+            "label": "Blightash Flats"
+          },
+          "6": {
+            "label": "Slagjaw's Hold"
+          },
+          "7": {
+            "label": "Emberbound Camp"
+          },
+          "8": {
+            "label": "The Cinderpit"
+          },
+          "9": {
+            "label": "The Emberward Vault"
+          }
+        }
       }
     },
     "dungeons": {
@@ -6226,6 +6579,11 @@ export const zh_CN: EnTranslations = {
         "name": "墓龙圣所",
         "enterText": "空气变得冰冷。下方有庞然之物在呼吸...",
         "leaveText": "你踉跄回到山风之中。"
+      },
+      "emberward_vault": {
+        "name": "The Emberward Vault",
+        "enterText": "The vault door grinds open on hinges that have not turned in centuries. The air past it tastes of ash and old iron.",
+        "leaveText": "You climb back out into the cooling wind of the Reach."
       },
       "nythraxis_crypt": {
         "name": "废弃墓穴",

@@ -143,10 +143,10 @@ describe('solo grantXp at the cap', () => {
     const sim = makeSim('warrior');
     sim.setPlayerLevel(MAX_LEVEL);
     sim.events.length = 0;
-    sim.grantXp(xpToReachLevel(22)); // jump well past the cap
+    sim.grantXp(xpToReachLevel(28)); // jump well past the cap (26)
     const vlevels = sim.events.filter((e) => e.type === 'virtualLevelUp').map((e: any) => e.level);
-    expect(vlevels).toContain(21);
-    expect(vlevels).toContain(22);
+    expect(vlevels).toContain(27);
+    expect(vlevels).toContain(28);
   });
 });
 
@@ -372,14 +372,14 @@ describe('xp-bar label states', () => {
   it('at-cap with overflow shows the virtual-level bar starting at +0', () => {
     const v = xpBarView({ level: MAX_LEVEL, xp: 0, lifetimeXp: xpToReachLevel(MAX_LEVEL), showOverflow: true });
     expect(v.postCap).toBe(true);
-    expect(v.label).toBe(`Lv 20 (+0)  ·  ${formatXp(xpToReachLevel(MAX_LEVEL))} total XP  ·  0% to next`);
+    expect(v.label).toBe(`Lv 26 (+0)  ·  ${formatXp(xpToReachLevel(MAX_LEVEL))} total XP  ·  0% to next`);
   });
 
   it('post-cap shows virtual level, total, and percent to next', () => {
-    const lifetime = xpToReachLevel(27); // start of virtual level 27
+    const lifetime = xpToReachLevel(27); // start of virtual level 27 (one past the cap of 26)
     const v = xpBarView({ level: MAX_LEVEL, xp: 0, lifetimeXp: lifetime, showOverflow: true });
     expect(v.postCap).toBe(true);
-    expect(v.label).toBe(`Lv 20 (+7)  ·  ${formatXp(lifetime)} total XP  ·  0% to next`);
+    expect(v.label).toBe(`Lv 26 (+1)  ·  ${formatXp(lifetime)} total XP  ·  0% to next`);
   });
 
   it('post-cap fill fraction advances within the virtual level', () => {
@@ -387,7 +387,7 @@ describe('xp-bar label states', () => {
     const span = xpToReachLevel(28) - xpToReachLevel(27);
     const v = xpBarView({ level: MAX_LEVEL, xp: 0, lifetimeXp: base + Math.floor(span * 0.5), showOverflow: true });
     expect(v.fillFrac).toBeCloseTo(0.5, 1);
-    expect(v.label).toMatch(/Lv 20 \(\+7\)  ·  .* total XP  ·  \d+% to next/);
+    expect(v.label).toMatch(/Lv 26 \(\+1\)  ·  .* total XP  ·  \d+% to next/);
   });
 
   it('classic "MAX LEVEL" when overflow display is turned off', () => {
