@@ -257,6 +257,37 @@ export const DUNGEON_MOBS: Record<string, MobTemplate> = {
     ],
     scale: 3.1, color: 0x221b2d,
   },
+
+  // ---- The Emberward Vault (5-player, level 26) ----
+  // The rite's caster: summons pyromancer adds at 66%/33% hp, like Velkhar.
+  grand_pyrist_thessian: {
+    id: 'grand_pyrist_thessian', name: 'Grand Pyrist Thessian', minLevel: 26, maxLevel: 26,
+    family: 'humanoid', elite: true, boss: true,
+    hpBase: 360, hpPerLevel: 48, dmgBase: 22, dmgPerLevel: 3.8, attackSpeed: 2.1,
+    armorPerLevel: 22, moveSpeed: 7, aggroRadius: 16,
+    aoePulse: { min: 18, max: 26, radius: 8, every: 10, name: 'Cinder Nova', school: 'fire', fx: 'nova' },
+    summonAdds: { mobId: 'emberbound_pyromancer', count: 3, atHpPct: [0.66, 0.33] },
+    loot: [{ copper: 3000, chance: 1 }],
+    scale: 1.3, color: 0xc83018,
+  },
+  // The summoned final boss: a horror of living fire the completed rite calls into
+  // being (a distinct entity, like Korzul to Velkhar). Pulse + adds at 50% + enrage <25%.
+  vrothaxis_the_ember_heart: {
+    id: 'vrothaxis_the_ember_heart', name: 'Vrothaxis, the Ember Heart', minLevel: 26, maxLevel: 26,
+    family: 'elemental', elite: true, boss: true,
+    hpBase: 460, hpPerLevel: 56, dmgBase: 26, dmgPerLevel: 4.6, attackSpeed: 2.6,
+    armorPerLevel: 26, moveSpeed: 7, aggroRadius: 16,
+    aoePulse: { min: 34, max: 48, radius: 16, every: 9, name: 'Heartfire Eruption', school: 'fire', fx: 'nova' },
+    summonAdds: { mobId: 'ember_wisp', count: 2, atHpPct: [0.5] },
+    enrage: { belowHpPct: 0.25, dmgMult: 1.5, hasteMult: 1.25 },
+    loot: [
+      { copper: 6000, chance: 1 },
+      { itemId: 'wyrmash_greatblade', chance: 0.34, rollGroup: 'emberward_epic' },
+      { itemId: 'staff_of_the_emberward', chance: 0.33, rollGroup: 'emberward_epic' },
+      { itemId: 'cinderfang_blades', chance: 0.33, rollGroup: 'emberward_epic' },
+    ],
+    scale: 1.6, color: 0xd1480f,
+  },
 };
 
 // Trash packs of 2 elites (spaced beyond social-aggro range so groups can
@@ -326,6 +357,28 @@ const NYTHRAXIS_RAID_SPAWN_LIST: DungeonSpawn[] = [
   { mobId: 'nythraxis_scourge_of_thornpeak', x: 0, z: 96 },
 ];
 
+// The Emberward Vault: linear chambers (z 0 -> ~120), packs of 2 spaced beyond
+// social-aggro, Thessian holding the waist, then Vrothaxis on the heart at the end.
+// Trash reuses the Emberbound/ember overworld roster (see content/zone4).
+const EMBERWARD_SPAWN_LIST: DungeonSpawn[] = [
+  { mobId: 'emberbound_pyromancer', x: -3, z: 16 },
+  { mobId: 'emberbound_pyromancer', x: 3, z: 17 },
+  { mobId: 'emberbound_initiate', x: -8, z: 30 },
+  { mobId: 'emberbound_pyromancer', x: -4, z: 31 },
+  { mobId: 'emberbound_initiate', x: 7, z: 44 },
+  { mobId: 'emberbound_initiate', x: 3, z: 45 },
+  { mobId: 'magma_husk', x: -6, z: 58 },
+  { mobId: 'ember_wisp', x: -2, z: 59 },
+  { mobId: 'grand_pyrist_thessian', x: 0, z: 72 },
+  { mobId: 'ember_wisp', x: -7, z: 86 },
+  { mobId: 'magma_husk', x: -3, z: 87 },
+  { mobId: 'blightash_wight', x: 6, z: 100 },
+  { mobId: 'blightash_wight', x: 2, z: 101 },
+  { mobId: 'vrothaxis_the_ember_heart', x: 0, z: 118 },
+  { mobId: 'magma_husk', x: -5, z: 116 },
+  { mobId: 'magma_husk', x: 5, z: 116 },
+];
+
 export const DUNGEON_DEFS: Record<string, DungeonDef> = {
   hollow_crypt: {
     id: 'hollow_crypt',
@@ -365,6 +418,19 @@ export const DUNGEON_DEFS: Record<string, DungeonDef> = {
     suggestedPlayers: 5,
     enterText: 'The air goes cold. Something vast breathes below...',
     leaveText: 'You stagger back into the mountain wind.',
+  },
+  emberward_vault: {
+    id: 'emberward_vault',
+    name: 'The Emberward Vault',
+    index: 6,
+    doorPos: { x: 0, z: 1240 }, // sealed vault door at the head of the Cinderpit
+    entry: { x: 0, z: 4 },
+    exitOffset: { x: 0, z: -6 },
+    spawns: EMBERWARD_SPAWN_LIST,
+    interior: 'sanctum',
+    suggestedPlayers: 5,
+    enterText: 'The vault door grinds open on hinges that have not turned in centuries. The air past it tastes of ash and old iron.',
+    leaveText: 'You climb back out into the cooling wind of the Reach.',
   },
   nythraxis_crypt: {
     id: 'nythraxis_crypt',

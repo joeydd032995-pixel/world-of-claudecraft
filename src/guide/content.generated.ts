@@ -1239,6 +1239,27 @@ export const GUIDE_ZONES: GuideZoneInfo[] = [
       "Gravewyrm Sanctum"
     ],
     "welcome": "Captain Thessaly holds the wall at Highwatch — barely."
+  },
+  {
+    "id": "emberfall_reach",
+    "name": "Emberfall Reach",
+    "min": 20,
+    "max": 26,
+    "biome": "peaks",
+    "hub": "Cinderhold",
+    "pois": [
+      "Cinderhold",
+      "Ashclaw Scrub",
+      "Cindermarch Tunnels",
+      "The Slagmere",
+      "Charwing Roost",
+      "Blightash Flats",
+      "Slagjaw's Hold",
+      "Emberbound Camp",
+      "The Cinderpit",
+      "The Emberward Vault"
+    ],
+    "welcome": "Warden Ulra holds the line at Cinderhold, against fire that should have died with the Wyrm."
   }
 ];
 
@@ -1281,6 +1302,14 @@ export const GUIDE_DUNGEONS: GuideDungeon[] = [
     "suggestedPlayers": 10,
     "min": 20,
     "max": 20
+  },
+  {
+    "id": "emberward_vault",
+    "isRaid": false,
+    "suggestedPlayers": 5,
+    "min": 22,
+    "max": 26,
+    "name": "The Emberward Vault"
   }
 ];
 

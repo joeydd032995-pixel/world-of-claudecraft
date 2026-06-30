@@ -85,6 +85,18 @@ import {
   ZONE3_ROADS,
   ZONE3_ZONE,
 } from './content/zone3';
+import {
+  ZONE4_CAMPS,
+  ZONE4_ITEMS,
+  ZONE4_MOBS,
+  ZONE4_NPCS,
+  ZONE4_OBJECTS,
+  ZONE4_PROPS,
+  ZONE4_QUEST_ORDER,
+  ZONE4_QUESTS,
+  ZONE4_ROADS,
+  ZONE4_ZONE,
+} from './content/zone4';
 import { DUNGEON_WALL_HW } from './dungeon_layout';
 
 export type { DelveShopEntry, DelveShopGate, DelveShopOffer } from './content/delves';
@@ -135,6 +147,7 @@ export const ITEMS: Record<string, ItemDef> = mergeItems(
   BASE_ITEMS,
   ZONE2_ITEMS,
   ZONE3_ITEMS,
+  ZONE4_ITEMS,
   TEMPLE_ITEMS,
   DELVE_ITEMS,
 );
@@ -143,6 +156,7 @@ export const MOBS: Record<string, MobTemplate> = {
   ...ZONE1_MOBS,
   ...ZONE2_MOBS,
   ...ZONE3_MOBS,
+  ...ZONE4_MOBS,
   ...DUNGEON_MOBS,
   ...WARLOCK_PET_MOBS,
   ...TEMPLE_MOBS,
@@ -154,6 +168,7 @@ export const NPCS: Record<string, NpcDef> = {
   ...ZONE1_NPCS,
   ...ZONE2_NPCS,
   ...ZONE3_NPCS,
+  ...ZONE4_NPCS,
   ...TEMPLE_NPCS,
   brother_halven: BROTHER_HALVEN,
 };
@@ -162,6 +177,7 @@ export const QUESTS: Record<string, QuestDef> = {
   ...ZONE1_QUESTS,
   ...ZONE2_QUESTS,
   ...ZONE3_QUESTS,
+  ...ZONE4_QUESTS,
   ...TEMPLE_QUESTS,
 };
 
@@ -169,6 +185,7 @@ export const QUEST_ORDER: string[] = [
   ...ZONE1_QUEST_ORDER,
   ...ZONE2_QUEST_ORDER,
   ...ZONE3_QUEST_ORDER,
+  ...ZONE4_QUEST_ORDER,
   ...TEMPLE_QUEST_ORDER,
 ];
 
@@ -183,21 +200,31 @@ export const CAMPS: CampDef[] = [
   ...TEMPLE_CAMPS,
   ...ZONE1_CHAPEL_CAMPS,
   { mobId: 'grix_the_tunnelking', center: { x: -95, z: -78 }, radius: 4, count: 1 },
+  // Zone 4 (Emberfall Reach) appended LAST so every existing zone camp keeps its
+  // exact world-gen draw order (determinism); see the note above.
+  ...ZONE4_CAMPS,
 ];
 
 export const GROUND_OBJECTS: GroundObjectDef[] = [
   ...ZONE1_OBJECTS,
   ...ZONE2_OBJECTS,
   ...ZONE3_OBJECTS,
+  ...ZONE4_OBJECTS,
   ...TEMPLE_OBJECTS,
 ];
 
-export const ROADS: { x: number; z: number }[][] = [...ZONE1_ROADS, ...ZONE2_ROADS, ...ZONE3_ROADS];
+export const ROADS: { x: number; z: number }[][] = [
+  ...ZONE1_ROADS,
+  ...ZONE2_ROADS,
+  ...ZONE3_ROADS,
+  ...ZONE4_ROADS,
+];
 
 export const PROPS: ZonePropsDef = mergeProps([
   ZONE1_PROPS,
   ZONE2_PROPS,
   ZONE3_PROPS,
+  ZONE4_PROPS,
   TEMPLE_PROPS,
 ]);
 
@@ -255,7 +282,7 @@ export const GROUP_XP_BONUS = [1, 1, 1.166, 1.3, 1.43];
 // graveyard, its lakes, and a biome palette the renderer keys off.
 // ---------------------------------------------------------------------------
 
-export const ZONES: ZoneDef[] = [ZONE1_ZONE, ZONE2_ZONE, ZONE3_ZONE];
+export const ZONES: ZoneDef[] = [ZONE1_ZONE, ZONE2_ZONE, ZONE3_ZONE, ZONE4_ZONE];
 
 export const WORLD_SIZE = 360; // world width: x spans [-180, 180]
 export const WORLD_MIN_X = -WORLD_SIZE / 2;

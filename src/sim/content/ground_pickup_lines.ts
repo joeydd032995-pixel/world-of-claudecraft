@@ -81,6 +81,23 @@ export const GROUND_PICKUP_LINES: Record<string, GroundPickupLines> = {
     deny: 'The ritual circle lies cold and dormant.',
     enough: 'The circle has nothing more to give you.',
   },
+  // Zone 4 — Emberfall Reach
+  cinderhold_signal_flare: {
+    deny: 'The signal flare is not yours to raise yet.',
+    enough: 'You already carry the Cinderhold signal flare.',
+  },
+  cinder_resin: {
+    deny: 'The resin is still bonded to the rock, too hot to pry loose.',
+    enough: 'You have gathered enough cinder resin.',
+  },
+  cooling_slag_core: {
+    deny: 'The slag is still molten at its heart; it would burn your hands.',
+    enough: 'You have collected enough cooling slag cores.',
+  },
+  vault_seal_ember: {
+    deny: 'The seal-ember flares and rejects your touch.',
+    enough: 'You have gathered enough vault seal embers.',
+  },
 };
 
 export function groundPickupDeny(itemId: string, itemName: string): string {

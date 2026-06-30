@@ -81,6 +81,24 @@ const MOB_IDS = [
   'reliquary_saintless_effigy',
   'deacon_varric',
   'acolyte_tessa',
+  // Zone 4 — Emberfall Reach
+  'ashclaw_warg',
+  'ashclaw_alpha',
+  'cindermarch_kobold',
+  'cindermarch_blaster',
+  'emberbound_initiate',
+  'emberbound_pyromancer',
+  'blightash_revenant',
+  'blightash_wight',
+  'charwing_roc',
+  'charwing_matriarch',
+  'slagjaw_marauder',
+  'slagjaw_chieftain',
+  'magma_husk',
+  'ember_wisp',
+  'vrask_the_emberseer',
+  'grand_pyrist_thessian',
+  'vrothaxis_the_ember_heart',
 ] as const;
 
 const NPC_IDS = [
@@ -105,6 +123,13 @@ const NPC_IDS = [
   'loremaster_caddis',
   'brother_aldric_raid', // dynamically-spawned raid turn-in NPC (Crypt of Nythraxis)
   'brother_halven', // Collapsed Reliquary delve board NPC
+  // Zone 4 — Emberfall Reach (Cinderhold)
+  'warden_ulra',
+  'brother_aldric_cinderhold',
+  'scout_brannis',
+  'quartermaster_dessa',
+  'armorer_kovan',
+  'loremaster_sela',
 ] as const;
 
 const QUEST_IDS = [
@@ -179,13 +204,38 @@ const QUEST_IDS = [
   'q_nythraxis_bound_guardian',
   'q_nythraxis_scourges_end',
   'q_mogger',
+  // Zone 4 — Emberfall Reach
+  'q_cinderhold_signal',
+  'q_ashclaw_culling',
+  'q_ashclaw_pelts',
+  'q_ashclaw_alpha',
+  'q_cindermarch_tunnels',
+  'q_cinder_resin',
+  'q_cindermarch_blasters',
+  'q_emberbound_scouts',
+  'q_emberbound_orders',
+  'q_emberash_study',
+  'q_emberash_cores',
+  'q_blightash_unrest',
+  'q_blightash_wights',
+  'q_charwing_eggs',
+  'q_charwing_matriarch',
+  'q_slagjaw_raiders',
+  'q_slagjaw_chieftain',
+  'q_emberward_signal',
+  'q_emberward_wisps',
+  'q_vrask',
+  'q_grand_pyrist',
+  'q_korzuls_ember',
+  'q_the_emberward_vault',
 ] as const;
 
-const ZONE_IDS = ['eastbrook_vale', 'mirefen_marsh', 'thornpeak_heights'] as const;
+const ZONE_IDS = ['eastbrook_vale', 'mirefen_marsh', 'thornpeak_heights', 'emberfall_reach'] as const;
 const DUNGEON_IDS = [
   'hollow_crypt',
   'sunken_bastion',
   'gravewyrm_sanctum',
+  'emberward_vault',
   'nythraxis_crypt',
   'nythraxis_boss_arena',
 ] as const;
